@@ -276,7 +276,7 @@ class EQTransformer(WaveformModel):
 
             outputs.append(pred)
 
-        return tuple(outputs)
+        return torch.stack(outputs, dim=1)
 
     def annotate_window_post(self, pred, piggyback=None, argdict=None):
         # Combine predictions in one array
