@@ -663,7 +663,7 @@ class SeisBenchModel(nn.Module):
         self._weights_version = self._weights_metadata.get("version", "1")
 
         # Check version requirement
-        self._check_version_requirement()
+        # self._check_version_requirement()
 
         # Parse default args - Config default_args supersede constructor args
         default_args = self._weights_metadata.get("default_args", {})
